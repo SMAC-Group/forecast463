@@ -8,6 +8,11 @@ send_prediction = function(group, prediction, from, key){
   # Email receiver
   to = "psu.forecasting.instructors@gmail.com"
 
+  # Test email
+  if(group == 0 || from == "psu.forecasting.group.0@gmail.com") {
+    warning("The entered email address is a test email address and the corresponding forecasts will not be evaluated.")
+  }
+
   # Current date
   date = Sys.Date()
 
