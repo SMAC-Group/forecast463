@@ -174,5 +174,5 @@ check_credentials = function(group, from, key, verbose = TRUE) {
     print("Credentials appear to be OK")
   }
 
-  invisible(return(1))
+  invisible(return(TRUE))
 }
