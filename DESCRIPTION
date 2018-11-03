@@ -1,0 +1,24 @@
+Package: forecast463
+Type: Package
+Title: Tools for Forecasting project
+Version: 0.1.0
+Date: 2018-11-03
+LazyData: true
+Authors@R: c(
+    person("Stéphane", "Guerrier", email = "stef.guerrier@gmail.com", role = c("aut","cre")),
+    person("Roberto", "Molinari", role = "aut")
+    )
+Maintainer: Stéphane Guerrier <stephane@psu.edu>
+Description: Tools for Forecasting project.
+Depends:
+    R (>= 3.4.0)
+License: AGPL-3
+Imports: gmailr, pageviews
+RoxygenNote: 6.0.1
+Encoding: UTF-8
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://github.com/SMAC-Group/forecast463
+BugReports: https://github.com/SMAC-Group/forecast463/issues
