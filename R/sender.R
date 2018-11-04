@@ -17,7 +17,7 @@ send_prediction = function(group, prediction, from, key){
   }
 
   # Test email
-  if(from == "psu.forecasting.group.00@gmail.com") {
+  if(from %in% "psu.forecasting.group.00@gmail.com") {
     warning("The entered email address is a test email address and the corresponding forecasts will not be evaluated.")
   }
 
@@ -96,7 +96,7 @@ check_prediction = function(prediction, verbose = TRUE) {
 #' @export
 check_credentials = function(group, from, key, verbose = TRUE) {
 
-  if (from %in% "psu.forecasting.group.00@gmail.com"){
+  if (identical(from, "psu.forecasting.group.00@gmail.com")){
 
     if(!is.numeric(group)){
       stop("Your group number is not a number, please enter a number and retry.")
