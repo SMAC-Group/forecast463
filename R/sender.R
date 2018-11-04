@@ -96,7 +96,7 @@ check_prediction = function(prediction, verbose = TRUE) {
 #' @export
 check_credentials = function(group, from, key, verbose = TRUE) {
 
-  if (from == "psu.forecasting.group.00@gmail.com"){
+  if (from %in% "psu.forecasting.group.00@gmail.com"){
 
     if(!is.numeric(group)){
       stop("Your group number is not a number, please enter a number and retry.")
