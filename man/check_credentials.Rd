@@ -2,7 +2,7 @@
 % Please edit documentation in R/sender.R
 \name{check_credentials}
 \alias{check_credentials}
-\title{Credentials checks}
+\title{Credentials check}
 \usage{
 check_credentials(group, from, key, verbose = TRUE)
 }

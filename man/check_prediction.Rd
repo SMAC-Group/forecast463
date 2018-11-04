@@ -2,7 +2,7 @@
 % Please edit documentation in R/sender.R
 \name{check_prediction}
 \alias{check_prediction}
-\title{Prediction object checks}
+\title{Prediction object check}
 \usage{
 check_prediction(prediction, verbose = TRUE)
 }

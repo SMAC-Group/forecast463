@@ -114,9 +114,6 @@ check_credentials = function(group, from, key, verbose = TRUE) {
 
     info_from2 = strsplit(info_from[[1]][1],"\\.")
 
-    if (as.numeric(info_from2[[1]][4]) != group){
-      stop(paste("The gmail address you are using doesn't match your group number. It should be: psu.forecasting.group.",group,"@gmail.com. Please correct and retry.", sep = ""))
-    }
 
     if (sum(info_from2[[1]][1:3] != c("psu", "forecasting", "group")) > 0) {
       stop(paste("The gmail address doesn't appear to be correctly formatted. It should be: psu.forecasting.group.",group,"@gmail.com. Please correct and retry.", sep = ""))
