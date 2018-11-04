@@ -79,7 +79,7 @@ check_prediction = function(prediction, verbose = TRUE) {
   }
 
   if(verbose == T){
-    print("Prediction object appears to be correctly formatted.")
+    cat("Prediction object appears to be correctly formatted.\n")
   }
 
   invisible(return(TRUE))
@@ -171,7 +171,7 @@ check_credentials = function(group, from, key, verbose = TRUE) {
   }
 
   if(verbose == T){
-    print("Credentials appear to be OK")
+    cat("Credentials appear to be OK\n")
   }
 
   invisible(return(TRUE))

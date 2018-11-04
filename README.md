@@ -18,6 +18,78 @@ key = "aaaaaaaaaaaaaaa"
 send_prediction(group = group, prediction = prediction, from = from, key = key)
 ```
 
+Another available function is the `check_credential` function which is used within the previous `send_prediction` function. This function can be used to check if the credentials you will use to submit the forecast are valid (i.e. your group number, key and email address). An example of how to use this function can be found below.
+
+``` r
+group = 2
+from = "psu.forecasting.group.2@gmail.com"
+key = "aaaaaaaaaaaaaaa"
+credential_OK = check_credentials(group = group, from = from, key = key)
+```
+
+    ## Credentials appear to be OK
+
+``` r
+credential_OK
+```
+
+    ## [1] TRUE
+
+Finally, you can also check if your prediction is correctly formatted. An example prediction object can be built as follows (note: this does not represent an actual predicition since it is a random generation of numbers).
+
+``` r
+mobile_pred = rnorm(1)
+mobile_ci = mobile_pred + c(cbind(-abs(rnorm(1)), abs(rnorm(1)))) #
+mobile_forecasts = list(mobile_pred = mobile_pred, mobile_ci = mobile_ci)
+  
+desktop_pred = rnorm(1)
+desktop_ci = desktop_pred + c(cbind(-abs(rnorm(1)), abs(rnorm(1)))) 
+desktop_forecasts = list(desktop_pred = desktop_pred, desktop_ci = desktop_ci)
+  
+silvio_pred = rnorm(1) 
+silvio_ci = silvio_pred + c(-abs(rnorm(1)), abs(rnorm(1))) 
+silvio_forecasts = list(silvio_pred = silvio_pred, silvio_ci = silvio_ci)
+  
+beyonce_pred = rnorm(1)
+beyonce_ci = beyonce_pred + c(-abs(rnorm(1)), abs(rnorm(1)))
+beyonce_forecasts = list(beyonce_pred = beyonce_pred, beyonce_ci = beyonce_ci)
+  
+chomsky_pred = rnorm(1) 
+chomsky_ci = chomsky_pred + c(-abs(rnorm(1)), abs(rnorm(1)))
+chomsky_forecasts = list(chomsky_pred = chomsky_pred, chomsky_ci = chomsky_ci)
+  
+lazio_pred = rnorm(1) 
+lazio_ci = lazio_pred + c(-abs(rnorm(1)), abs(rnorm(1))) 
+lazio_forecasts = list(lazio_pred = lazio_pred, lazio_ci = lazio_ci)
+  
+thanks_pred = rnorm(1) 
+thanks_ci = thanks_pred + c(-abs(rnorm(1)), abs(rnorm(1))) 
+thanks_forecasts = list(thanks_pred = thanks_pred, thanks_ci = thanks_ci)
+  
+ 
+prediction = list(mobile = mobile_forecasts,
+                  desktop = desktop_forecasts, 
+                  silvio = silvio_forecasts, 
+                  beyonce = beyonce_forecasts, 
+                  chomsky = chomsky_forecasts, 
+                  lazio = lazio_forecasts, 
+                  thanks = thanks_forecasts)
+```
+
+Once this prediction object is built, you can check if it is correctly formatted by using the `check_prediction` function as follows.
+
+``` r
+prediction_OK = check_prediction(prediction = prediction)
+```
+
+    ## Prediction object appears to be correctly formatted.
+
+``` r
+prediction_OK
+```
+
+    ## [1] TRUE
+
 Install Instructions
 --------------------
 
