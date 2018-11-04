@@ -42,7 +42,7 @@ send_prediction = function(group, prediction, from, key){
     body = paste("Your have submitted the following information:", key, date, paste(unlist(prediction), collapse = ","), sep = ";")))
 }
 
-#' @title Prediction object checks
+#' @title Prediction object check
 #' @description This function performs checks on the format of the prediction object. If there are no errors
 #' this function returns \code{TRUE}.
 #' @param prediction A \code{list} containing 7 elements representing your forecasts (refer to project description on Piazza).
@@ -86,7 +86,7 @@ check_prediction = function(prediction, verbose = TRUE) {
 
 }
 
-#' @title Credentials checks
+#' @title Credentials check
 #' @description This function performs checks on your credentials. If there are no errors
 #' this function returns \code{TRUE}.
 #' @param group An \code{integer} representing your group number (should be between 1 and 17).
